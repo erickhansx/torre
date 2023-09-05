@@ -1,5 +1,32 @@
+import { useEffect, useState } from 'react';
+
 const User = ({ user }) => {
+  const [isChecked, setIsChecked] = useState(false);
   const { name, professionalHeadline: headline, imageUrl: image } = user;
+
+  const handleIschecked = () => {
+    setIsChecked((prevChecked) => {
+      const nextChecked = !prevChecked;
+      if (nextChecked) {
+        const userData = {
+          name,
+          headline,
+          imageUrl: image,
+          ardaId: user.ardaId,
+        };
+        fetch('http://localhost:3000/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ user: userData }),
+        });
+      }
+
+      return nextChecked;
+    });
+  };
+
   return (
     <div className="flex w-[90%] text-yellow-300 justify-between bg-black py-8 my-4 px-4 rounded-md">
       <div className="flex w-[60%]">
@@ -12,7 +39,7 @@ const User = ({ user }) => {
           <h1 className="md:text-lg sm:tracking-wide sm:text-sm text-xs ">
             {name}
           </h1>
-          <span className="md:text-base sm:tracking-wide text-xs ">
+          <span className="md:text-base sm:tracking-wide text-xs text-yellow-300/40 ">
             {headline}
           </span>
         </div>
@@ -23,6 +50,8 @@ const User = ({ user }) => {
           <input
             type="checkbox"
             className="hover:ring hover:ring-yellow-300 right-[20%]"
+            checked={isChecked}
+            onChange={handleIschecked}
           />
         </div>
         <div>
