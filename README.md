@@ -27,7 +27,7 @@
 
 **[Torre]** is an app that allows you to search for users in the Torre api. Add favorites. See the recent searches and visit their profiles. 
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With <a name="built-with"'></a>
 
 - Ruby on Rails
 - PostgreSQL
@@ -180,8 +180,3 @@ If you like this project please leave a like on Github and share it with your fr
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
