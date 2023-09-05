@@ -46,11 +46,11 @@ const SearchContainer = ({ query }) => {
   }, [query]);
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center lg:max-w-[50%] justify-center">
       {Array.isArray(currentItems) &&
-        currentItems.map((user) => <User user={user} key={user.ardaID} />)}
+        currentItems.map((user) => <User user={user} key={user.ardaId} />)}
       {currentItems?.length < 1 &&
-        currentItems.map((user) => <User user={user} key={user.ardaID} />)}{' '}
+        currentItems.map((user) => <User user={user} key={user.ardaId} />)}{' '}
       {/* No need to fetch from local storage again. Just use the state. */}
       <div className="pagination-controls">
         <button onClick={prevPage} disabled={currentPage === 1}>

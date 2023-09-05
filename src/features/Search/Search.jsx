@@ -9,7 +9,7 @@ const Search = () => {
   console.log(query);
 
   return (
-    <div className="text-yellow-50 min-h-[85dvh] flex flex-col justify-center">
+    <div className="text-yellow-50 min-h-[85dvh] flex flex-col justify-center items-center">
       <SearchInput onChange={onChange} query={query} />
       <SearchContainer query={query} />
     </div>
