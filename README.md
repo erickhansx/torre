@@ -76,16 +76,10 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- You can see the live deploy of this app in this [link](https://fantastic-maamoul-0b2722.netlify.app
+- You can see the live deploy of this app in this [link](https://zesty-shortbread-5bfa80.netlify.app/
 )
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Kanba Board <a name="kanba"></a>
-- **Link to our kanban board [here](https://github.com/orgs/Full-Stack-Capstone/projects/1)**
-- **Initial state of the Kanban board![image](https://user-images.githubusercontent.com/107952724/222493678-9d10c540-6ff5-4ac1-a33a-5954331f9e35.png)**
-- **The project team had 4 members**
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
 ## Available Scripts
