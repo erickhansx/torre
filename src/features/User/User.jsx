@@ -4,6 +4,10 @@ const User = ({ user }) => {
   const [isChecked, setIsChecked] = useState(false);
   const { name, professionalHeadline: headline, imageUrl: image } = user;
 
+  const handleOnClick = () => {
+    window.location.href = `https://torre.ai/${user.username}`;
+  };
+
   const handleIschecked = () => {
     setIsChecked((prevChecked) => {
       const nextChecked = !prevChecked;
@@ -29,7 +33,7 @@ const User = ({ user }) => {
 
   return (
     <div className="flex w-[90%] text-yellow-300 justify-between bg-black py-8 my-4 px-4 rounded-md">
-      <div className="flex w-[60%]">
+      <div className="flex w-[60%] cursor-pointer" onClick={handleOnClick}>
         <img
           src={`${image}`}
           alt="profile image"
@@ -55,10 +59,16 @@ const User = ({ user }) => {
           />
         </div>
         <div>
-          <button className="border-yellow-300 text-stone-800 border py-2 px-4 rounded-full bg-yellow-400 hover:ring hover:ring-offset-1">
+          <button
+            onClick={handleOnClick}
+            className="border-yellow-300 text-stone-800 border py-2 px-4 rounded-full bg-yellow-400 hover:ring hover:ring-offset-1"
+          >
             Message
           </button>
-          <button className="border-stone-800 text-yellow-300 border py-2 px-6 rounded-full bg-stone-800 hover:ring hover:ring-offset-1">
+          <button
+            onClick={handleOnClick}
+            className="border-stone-800 text-yellow-300 border py-2 px-6 rounded-full bg-stone-800 hover:ring hover:ring-offset-1"
+          >
             Signal
           </button>
         </div>
