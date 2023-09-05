@@ -36,7 +36,7 @@ async function postRecent(name) {
   const termData = {
     term: name,
   };
-  fetch('http://localhost:3000/searches', {
+  fetch('https://torre-api.onrender.com/searches', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ async function postRecent(name) {
 }
 
 async function getRecent() {
-  const response = await fetch('http://localhost:3000/searches');
+  const response = await fetch('https://torre-api.onrender.com/searches');
   const data = await response.json();
   return data;
 }
