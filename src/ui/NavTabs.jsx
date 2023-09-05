@@ -9,12 +9,18 @@ const NavTabs = () => {
       >
         Search
       </Link>
-      <div className="bg-stone-600 py-4 px-14 text-center w-[25%] border-t-2 border-yellow-100 rounded-t-xl hover:bg-stone-900 active:bg-slate-800 transition-all duration-300">
+      <Link
+        to={'/profile'}
+        className="bg-stone-600 py-4 px-14 text-center w-[25%] border-t-2 border-yellow-100 rounded-t-xl hover:bg-stone-900 active:bg-slate-800 transition-all duration-300"
+      >
         Profile
-      </div>
-      <div className="bg-stone-600 py-4 px-14 text-center w-[25%] border-t-2 border-yellow-100 rounded-t-xl hover:bg-stone-900 active:bg-slate-800 transition-all duration-300">
+      </Link>
+      <Link
+        to={'/favorites'}
+        className="bg-stone-600 py-4 px-14 text-center w-[25%] border-t-2 border-yellow-100 rounded-t-xl hover:bg-stone-900 active:bg-slate-800 transition-all duration-300"
+      >
         Favorites
-      </div>
+      </Link>
     </div>
   );
 };
