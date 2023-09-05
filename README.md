@@ -1,12 +1,4 @@
-<a name="readme-top"></a>
 
-<div align="center">
-  <img src="./src/images/logo-no-background.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>PetBNB</b></h3>
-
-</div>
 
 # 📗 Table of Contents
 
@@ -31,7 +23,7 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 [PetBNB] <a name="about-project"></a>
+# 📖 [Torre] <a name="about-project"></a>
 
 **[Torre]** is an app that allows you to search for users in the Torre api. Add favorites. See the recent searches and visit their profiles. 
 
