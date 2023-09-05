@@ -7,6 +7,8 @@ export default function AppProvider({ children }) {
   const [users, setUsers] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+  const [recentSearches, setRecentSearches] = useState([]);
 
   const onChange = (e) => {
     setQuery(e.target.value);
@@ -26,6 +28,10 @@ export default function AppProvider({ children }) {
         currentPage,
         setCurrentPage,
         onChange,
+        isLoading,
+        setIsLoading,
+        recentSearches,
+        setRecentSearches,
       }}
     >
       {children}

@@ -25,10 +25,30 @@ async function getSearch(query, signal) {
     const textResponse = await response.text();
     const lines = textResponse.split('\n').filter(Boolean);
     const data = lines.map((line) => JSON.parse(line));
-    return data;
+    return data || [];
   } catch (error) {
     console.error('There was an error fetching the users:', error);
+    return [];
   }
 }
 
-export { getSearch };
+async function postRecent(name) {
+  const termData = {
+    term: name,
+  };
+  fetch('http://localhost:3000/searches', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(termData),
+  });
+}
+
+async function getRecent() {
+  const response = await fetch('http://localhost:3000/searches');
+  const data = await response.json();
+  return data;
+}
+
+export { getSearch, postRecent, getRecent };
