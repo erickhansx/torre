@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { getSearch } from '../../services/apiTorre';
 import User from '../User/User';
+import AppContext from '../../AppContext';
 
-const SearchContainer = ({ query }) => {
-  const [searchResult, setSearchResult] = useState([]);
+const SearchContainer = () => {
+  const { searchResult, setSearchResult, query } = useContext(AppContext);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -51,7 +52,6 @@ const SearchContainer = ({ query }) => {
         currentItems.map((user) => <User user={user} key={user.ardaId} />)}
       {currentItems?.length < 1 &&
         currentItems.map((user) => <User user={user} key={user.ardaId} />)}{' '}
-      {/* No need to fetch from local storage again. Just use the state. */}
       <div className="pagination-controls">
         <button onClick={prevPage} disabled={currentPage === 1}>
           Previous

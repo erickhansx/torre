@@ -1,4 +1,8 @@
-const SearchInput = ({ onChange, query }) => {
+import { useContext } from 'react';
+import AppContext from '../../AppContext';
+
+const SearchInput = ({ onChange }) => {
+  const { query } = useContext(AppContext);
   return (
     <div className="w-full flex justify-center items-center">
       <input

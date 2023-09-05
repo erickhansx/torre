@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
+import AppContext from '../../AppContext';
 
 const Favorite = () => {
-  const [favorites, setFavorites] = useState([]);
+  const { favorites, setFavorites } = useContext(AppContext);
 
   useEffect(() => {
     const getFavorites = async () => {

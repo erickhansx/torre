@@ -4,6 +4,7 @@ import Profile from './features/Profile/Profile';
 import Recent from './features/Recent/Recent';
 import Search from './features/Search/Search';
 import Favorite from './features/Favorite/Favorite';
+import AppProvider from './AppProvider';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
+  );
 }
 
 export default App;
