@@ -6,7 +6,7 @@ const SearchInput = ({ onChange }) => {
   const { query } = useContext(AppContext);
   return (
     <>
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full flex justify-center items-center mt-8">
         <input
           type="text"
           placeholder="Search..."
