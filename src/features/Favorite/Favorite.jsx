@@ -6,7 +6,7 @@ const Favorite = () => {
 
   useEffect(() => {
     const getFavorites = async () => {
-      const response = await fetch('http://localhost:3000/users');
+      const response = await fetch('https://torre-api.onrender.com/users');
       const data = await response.json();
       setFavorites(data);
       console.log(data);
@@ -20,7 +20,6 @@ const Favorite = () => {
 
   return (
     <div className="text-text-color-d2-50 min-h-[85dvh] flex flex-col justify-center items-center">
-      <h1 className="text-3xl">Favorites</h1>
       <div className="flex flex-col items-center">
         {favorites.map((user) => (
           <div
